@@ -1,0 +1,24 @@
+{
+  "parser": "@babel/eslint-parser",
+  "extends": "airbnb",
+  "plugins": ["jsx-a11y", "import"],
+  "rules": {
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "eol-last": ["error", "always"],
+    "no-plusplus": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }], // Warns on console.log but allows console.warn and console.error
+    "no-unused-vars": "warn", // Warns on any variables that are declared but not used
+    "no-unused-imports": "off", // This needs to be added via a plugin as ESLint does not provide it directly,
+    "import/no-extraneous-dependencies": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false
+  }
+}

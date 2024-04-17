@@ -1,0 +1,50 @@
+{
+  "name": "sequlize-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src --exec \"babel-node src\"",
+    "precommit-msg": "echo 'Precommit checks...' && exit 0",
+    "start": "node ./dist/index.js",
+    "build": "rimraf dist && npm run lint && npx babel src -s -D -d dist",
+    "lint": "eslint ./src/**/*.js"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.4",
+    "@babel/eslint-parser": "^7.24.1",
+    "@babel/node": "^7.23.9",
+    "@babel/plugin-transform-runtime": "^7.24.3",
+    "@babel/preset-env": "^7.24.4",
+    "babel-node": "^0.0.1-security",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "nodemon": "^3.1.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mariadb": "^3.3.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.9.4",
+    "sequelize": "^6.37.3",
+    "uuid": "^9.0.1"
+  }
+}
